@@ -74,9 +74,6 @@ public class ReactFeatureFlags {
   /** Feature flag to configure eager initialization of Fabric */
   public static boolean eagerInitializeFabric = false;
 
-  /** Feature flag to use stopSurface when ReactRootView is unmounted. */
-  public static boolean enableStopSurfaceOnRootViewUnmount = false;
-
   /** Use experimental SetState retry mechanism in view? */
   public static boolean enableExperimentalStateUpdateRetry = false;
 
@@ -86,9 +83,9 @@ public class ReactFeatureFlags {
   /** Disable customDrawOrder in ReactViewGroup under Fabric only. */
   public static boolean disableCustomDrawOrderFabric = false;
 
-  /** Potential bugfix for crashes caused by mutating the view hierarchy during onDraw. */
-  public static boolean enableDrawMutationFix = true;
-
   /** Use lock-free data structures for Fabric MountItems. */
   public static boolean enableLockFreeMountInstructions = false;
+
+  /** Temporary flag for FB-internal workaround for RN:Litho interop in non-Fabric RN. */
+  public static boolean enableNonFabricRNLithoForceLayout = true;
 }
